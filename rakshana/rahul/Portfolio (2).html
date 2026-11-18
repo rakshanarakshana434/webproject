@@ -1,0 +1,380 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raghul | My Portfolio</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 90px;
+        }
+
+        body {
+            background: #fffaf5;
+            color: #29213b;
+        }
+
+        /* Navigation Bar */
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px 6%;
+            background: crimson;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-bar h1 {
+            font-size: 27px;
+        }
+
+        .link {
+            display: flex;
+            gap: 22px;
+            flex-wrap: wrap;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .link a {
+            color: white;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .link a:hover {
+            color: aqua;
+        }
+
+        /* Home Section */
+        .home {
+            min-height: 85vh;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 40px;
+            padding: 60px 8%;
+            background: antiquewhite;
+        }
+
+        .home-content {
+            max-width: 550px;
+        }
+
+        .home-content .welcome {
+            color: crimson;
+            font-weight: bold;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .home h2 {
+            font-size: clamp(35px, 5vw, 55px);
+            margin-bottom: 15px;
+        }
+
+        .home h2 span {
+            color: crimson;
+        }
+
+        .home h3 {
+            color: darkslateblue;
+            font-size: 24px;
+            margin-bottom: 18px;
+        }
+
+        .home p {
+            line-height: 1.8;
+            color: #51485b;
+            margin-bottom: 25px;
+        }
+
+        .profile {
+            width: 280px;
+            height: 330px;
+            padding: 8px;
+            background: linear-gradient(135deg, crimson, aqua);
+            border-radius: 25px;
+            box-shadow: 0 10px 30px #00000025;
+        }
+
+        .profile img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            background: crimson;
+            color: white;
+            border-radius: 25px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: darkslateblue;
+            transform: translateY(-3px);
+        }
+
+        /* Common Sections */
+        section:not(.home) {
+            scroll-margin-top: 85px;
+        }
+
+        .section {
+            margin: 35px auto;
+            padding: 45px 8%;
+            width: 88%;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 5px 18px #00000010;
+        }
+
+        .section h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .section h2 span {
+            color: crimson;
+        }
+
+        .section p {
+            max-width: 750px;
+            margin: auto;
+            line-height: 1.9;
+        }
+
+        .course {
+            background: aqua;
+        }
+
+        .about {
+            background: #ffe4e1;
+        }
+
+        .skills {
+            background: aquamarine;
+        }
+
+        .goals {
+            background: #e6e6fa;
+        }
+
+        .contact {
+            background: #fff0d9;
+        }
+
+        /* Skill Cards */
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 18px;
+            margin-top: 25px;
+        }
+
+        .skill-card {
+            background: white;
+            padding: 20px 28px;
+            border-radius: 12px;
+            font-weight: bold;
+            border-bottom: 4px solid crimson;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+        }
+
+        /* Contact Button */
+        .contact .btn {
+            margin-top: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            padding: 25px;
+            background: crimson;
+            color: white;
+            text-align: center;
+            line-height: 1.8;
+        }
+
+        .footer a {
+            color: aqua;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-bar {
+                justify-content: center;
+                text-align: center;
+            }
+
+            .link {
+                justify-content: center;
+                gap: 15px;
+            }
+
+            .home {
+                text-align: center;
+                padding: 45px 6%;
+            }
+
+            .profile {
+                width: 230px;
+                height: 280px;
+            }
+
+            .section {
+                width: 92%;
+                padding: 35px 6%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header>
+        <nav class="nav-bar">
+            <h1>RAGHUL.V</h1>
+
+            <div class="link">
+                <a href="#home"target="_blank">HOME</a>
+                <a href="#course"target="_blank">COURSE</a>
+                <a href="#about"target="_blank">ABOUT ME</a>
+                <a href="#skills"target="_blank">SKILLS</a>
+                <a href="#goals"target="_blank">GOALS</a>
+                <a href="#contact"target="_blank">CONTACT</a>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Home -->
+    <section class="home" id="home">
+        <div class="home-content">
+            <p class="welcome">WELCOME TO MY PORTFOLIO</p>
+
+            <h2>Hello, I'm <span>Raghul.V</span></h2>
+
+            <h3>B.Tech AI & DS Student</h3>
+
+            <p>
+                I am a passionate student interested in technology,
+                programming, artificial intelligence, and creative
+                problem-solving. I believe every new skill is a step
+                towards a better future.
+            </p>
+
+            <a href="#about" class="btn">Discover More →</a>
+        </div>
+
+        <div class="profile">
+            <img src="a-person-wearing-a-hoodie-in-front-of-a-circular-hole-free-photo.jpg">
+        </div>
+    </section>
+
+    <!-- Course -->
+    <section class="section course" id="course">
+        <h2>My <span>Course</span></h2>
+
+        <p>
+            <strong>FIRST YEAR B.TECH</strong><br>
+            Artificial Intelligence and Data Science<br>
+            Nandha Engineering College
+        </p>
+    </section>
+
+    <!-- About Me -->
+    <section class="section about" id="about">
+        <h2>About <span>Me</span></h2>
+
+        <p>
+            Hello! I am Raghul V., currently pursuing B.Tech
+            Artificial Intelligence and Data Science at Nandha
+            Engineering College. I enjoy exploring new technologies,
+            learning programming, and developing my technical skills.
+            My aim is to become a skilled professional and create
+            innovative solutions for real-world problems.
+        </p>
+    </section>
+
+    <!-- Skills -->
+    <section class="section skills" id="skills">
+        <h2>My <span>Skills</span></h2>
+
+        <p>These are the areas I am learning and developing.</p>
+
+        <div class="skill-list">
+            <div class="skill-card">HTML</div>
+            <div class="skill-card">CSS</div>
+            <div class="skill-card">C Programming</div>
+            <div class="skill-card">Problem Solving</div>
+            <div class="skill-card">Communication</div>
+        </div>
+    </section>
+
+    <!-- Goals -->
+    <section class="section goals" id="goals">
+        <h2>My <span>Goals</span></h2>
+
+        <p>
+            My goal is to strengthen my programming knowledge,
+            explore Artificial Intelligence and Data Science,
+            build useful projects, and continuously improve
+            my creativity and problem-solving abilities.
+        </p>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+        <h2>Contact <span>Me</span></h2>
+
+        <p>
+            Thank you for visiting my portfolio!
+            Feel free to contact me for academic projects,
+            collaboration, or learning opportunities.
+        </p>
+
+        <!-- Replace with your actual email address -->
+        <a href="mailto:yourmail@example.com" class="btn">
+            Send Me an Email →
+        </a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Designed with passion by Raghul V.</p>
+        <p>© 2026 Raghul. All Rights Reserved.</p>
+        <p><a href="#home">Back to Top ↑</a></p>
+    </footer>
+
+</body>
+</html>
+
+
